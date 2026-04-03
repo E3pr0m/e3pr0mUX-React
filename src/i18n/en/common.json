@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "cta": "Start a Project"
+  },
+  "footer": {
+    "tagline": "Building the future, one pixel at a time.",
+    "rights": "All rights reserved.",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "lang": {
+    "switch": "IT"
+  }
+}

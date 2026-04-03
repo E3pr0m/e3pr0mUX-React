@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0a0010;
+    color: #e2e8f0;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  ::selection {
+    background: #7c3aed50;
+    color: #06b6d4;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0a0010;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #7c3aed;
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a855f7;
+  }
+}
+
+@layer components {
+  .neon-text {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor;
+  }
+
+  .neon-border {
+    box-shadow: 0 0 10px #7c3aed, 0 0 20px #7c3aed30, inset 0 0 10px #7c3aed10;
+  }
+
+  .neon-border-cyan {
+    box-shadow: 0 0 10px #06b6d4, 0 0 20px #06b6d430, inset 0 0 10px #06b6d410;
+  }
+
+  .cyber-grid-bg {
+    background-image: linear-gradient(rgba(6,182,212,0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(6,182,212,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .scanline-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.03) 2px,
+      rgba(0,0,0,0.03) 4px
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .glitch-text {
+    position: relative;
+  }
+
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .glitch-text::before {
+    color: #06b6d4;
+    animation: glitch-before 3s infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  }
+
+  .glitch-text::after {
+    color: #a855f7;
+    animation: glitch-after 3s infinite;
+    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  }
+
+  .btn-cyber {
+    @apply relative px-8 py-3 font-mono font-bold uppercase tracking-widest text-sm;
+    @apply border border-primary text-accent;
+    @apply transition-all duration-300;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  }
+
+  .btn-cyber:hover {
+    @apply bg-primary text-white;
+    box-shadow: 0 0 30px #7c3aed80;
+  }
+
+  .btn-cyber-outline {
+    @apply relative px-8 py-3 font-mono font-bold uppercase tracking-widest text-sm;
+    @apply border border-accent text-accent;
+    @apply transition-all duration-300;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  }
+
+  .btn-cyber-outline:hover {
+    @apply bg-accent text-bg;
+    box-shadow: 0 0 30px #06b6d480;
+  }
+
+  .card-cyber {
+    @apply relative border border-white/10 rounded-none p-6;
+    background: rgba(255,255,255,0.03);
+    @apply transition-all duration-500;
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+  }
+
+  .card-cyber:hover {
+    @apply border-primary/60;
+    box-shadow: 0 0 30px #7c3aed20, inset 0 0 30px #7c3aed05;
+  }
+
+  .section-tag {
+    @apply inline-block font-mono text-xs tracking-widest uppercase text-accent mb-4;
+  }
+
+  .section-tag::before {
+    content: '// ';
+    color: #4a5568;
+  }
+}
+
+@keyframes glitch-before {
+  0%, 90%, 100% { transform: translate(0); opacity: 0; }
+  91% { transform: translate(-2px, -1px); opacity: 0.8; }
+  93% { transform: translate(2px, 0); opacity: 0.8; }
+  95% { transform: translate(-1px, 1px); opacity: 0; }
+}
+
+@keyframes glitch-after {
+  0%, 85%, 100% { transform: translate(0); opacity: 0; }
+  86% { transform: translate(2px, 1px); opacity: 0.8; }
+  88% { transform: translate(-2px, 0); opacity: 0.8; }
+  90% { transform: translate(1px, -1px); opacity: 0; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}

@@ -1,0 +1,167 @@
+{
+  "hero": {
+    "tag": "Web Dev · AI · Design",
+    "headline": "We Build Digital",
+    "headline2": "Experiences",
+    "sub": "Custom web products, AI automation, and cutting-edge design — engineered to stand out.",
+    "cta_primary": "See Our Work",
+    "cta_secondary": "Get in Touch",
+    "scroll": "Scroll to explore"
+  },
+  "about": {
+    "tag": "Who we are",
+    "title": "A Studio at the Intersection of Code & Creativity",
+    "body": "E3pr0m-UX is a boutique digital agency specializing in high-performance web products, intelligent automation systems, and experience-first design. We work with startups, scale-ups, and enterprise teams that refuse to settle for ordinary.",
+    "stats": [
+      { "value": "50+", "label": "Projects Delivered" },
+      { "value": "98%", "label": "Client Satisfaction" },
+      { "value": "5+", "label": "Years of Experience" },
+      { "value": "12", "label": "Tech Specializations" }
+    ]
+  },
+  "services": {
+    "tag": "What we do",
+    "title": "Our Services",
+    "subtitle": "End-to-end digital solutions tailored to your business goals.",
+    "items": [
+      {
+        "icon": "Code",
+        "title": "Web Development",
+        "desc": "React, Next.js, and modern stacks. From landing pages to complex web applications — fast, accessible, and scalable."
+      },
+      {
+        "icon": "Cpu",
+        "title": "AI & Automation",
+        "desc": "Custom AI integrations, workflow automation, chatbots, and intelligent data pipelines that save time and cost."
+      },
+      {
+        "icon": "Palette",
+        "title": "UI/UX Design",
+        "desc": "Brand identity, design systems, prototypes, and user research. We design experiences users remember."
+      },
+      {
+        "icon": "Package",
+        "title": "Custom Web Products",
+        "desc": "SaaS platforms, internal tools, dashboards, and MVPs — built from scratch with your exact requirements."
+      }
+    ]
+  },
+  "portfolio": {
+    "tag": "Our work",
+    "title": "Selected Projects",
+    "subtitle": "A curated selection of work we're proud of.",
+    "filters": ["All", "Web Dev", "AI/Automation", "Design"],
+    "items": [
+      {
+        "title": "NeuralFlow SaaS",
+        "category": "AI/Automation",
+        "tag": "AI/Automation",
+        "desc": "AI-powered workflow automation platform with real-time analytics."
+      },
+      {
+        "title": "Apex Commerce",
+        "category": "Web Dev",
+        "tag": "Web Dev",
+        "desc": "High-performance e-commerce solution with custom checkout experience."
+      },
+      {
+        "title": "Luminos Brand",
+        "category": "Design",
+        "tag": "Design",
+        "desc": "Full brand identity and design system for a tech startup."
+      },
+      {
+        "title": "DataPulse Dashboard",
+        "category": "Web Dev",
+        "tag": "Web Dev",
+        "desc": "Real-time analytics dashboard with complex data visualizations."
+      },
+      {
+        "title": "ChatCore API",
+        "category": "AI/Automation",
+        "tag": "AI/Automation",
+        "desc": "Custom LLM integration layer for enterprise customer support."
+      },
+      {
+        "title": "PortalX Intranet",
+        "category": "Web Dev",
+        "tag": "Web Dev",
+        "desc": "Enterprise intranet portal with SSO and permission management."
+      }
+    ]
+  },
+  "pricing": {
+    "tag": "Investment",
+    "title": "Transparent Pricing",
+    "subtitle": "No surprises. Scope-aligned packages with clear deliverables.",
+    "toggle_monthly": "Monthly",
+    "toggle_annual": "Annual",
+    "discount": "Save 20%",
+    "cta": "Get Started",
+    "cta_custom": "Contact Us",
+    "popular": "Most Popular",
+    "plans": [
+      {
+        "name": "Starter",
+        "price_monthly": "1.500",
+        "price_annual": "1.200",
+        "desc": "Perfect for landing pages and small business websites.",
+        "features": [
+          "Up to 5 pages",
+          "Responsive design",
+          "Basic SEO setup",
+          "Contact form",
+          "1 month support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "price_monthly": "4.500",
+        "price_annual": "3.600",
+        "desc": "For startups and growing businesses that need more.",
+        "popular": true,
+        "features": [
+          "Up to 15 pages",
+          "Custom UI/UX design",
+          "CMS integration",
+          "AI chatbot integration",
+          "Analytics setup",
+          "3 months support"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price_monthly": "Custom",
+        "price_annual": "Custom",
+        "desc": "Bespoke solutions for complex requirements.",
+        "features": [
+          "Unlimited scope",
+          "Custom web product / SaaS",
+          "Full AI automation",
+          "Dedicated team",
+          "SLA & priority support",
+          "Ongoing retainer available"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "tag": "Let's talk",
+    "title": "Start Your Project",
+    "subtitle": "Tell us about your vision. We'll get back to you within 24 hours.",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "budget": "Budget Range",
+      "budget_options": ["< €1.000", "€1.000 – €5.000", "€5.000 – €15.000", "€15.000+"],
+      "message": "Describe your project...",
+      "submit": "Send Message",
+      "success": "Message sent! We'll be in touch soon.",
+      "error": "Something went wrong. Please try again."
+    },
+    "info": {
+      "email": "hello@e3pr0m-ux.com",
+      "location": "Remote-first · Worldwide"
+    }
+  }
+}

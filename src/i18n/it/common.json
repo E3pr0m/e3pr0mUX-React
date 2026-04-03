@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "about": "Chi Siamo",
+    "services": "Servizi",
+    "portfolio": "Portfolio",
+    "pricing": "Prezzi",
+    "contact": "Contatti",
+    "cta": "Inizia un Progetto"
+  },
+  "footer": {
+    "tagline": "Costruiamo il futuro, un pixel alla volta.",
+    "rights": "Tutti i diritti riservati.",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Termini di Servizio"
+    }
+  },
+  "lang": {
+    "switch": "EN"
+  }
+}
