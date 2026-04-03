@@ -11,9 +11,9 @@ import NeonButton from '@/components/ui/NeonButton'
 
 const particlesOptions = {
   background: { color: { value: 'transparent' } },
-  fpsLimit: 60,
+  fpsLimit: 30,
   particles: {
-    number: { value: 60, density: { enable: true, area: 900 } },
+    number: { value: 30, density: { enable: true, area: 900 } },
     color: { value: ['#7c3aed', '#06b6d4', '#a855f7'] },
     shape: { type: 'circle' },
     opacity: { value: { min: 0.1, max: 0.5 }, animation: { enable: true, speed: 0.5 } },
@@ -33,11 +33,12 @@ const particlesOptions = {
       out_mode: 'out',
     },
   },
-  detectRetina: true,
+  detectRetina: false,
 }
 
 export default function Hero() {
   const { t } = useTranslation('sections')
+  const isMobile = window.matchMedia('(pointer: coarse)').matches
   const tagRef = useRef()
   const h1Ref = useRef()
   const subRef = useRef()
@@ -59,27 +60,29 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden scanline-overlay">
-      {/* Particle background */}
-      <div className="absolute inset-0 z-0">
-        <Particles
-          id="hero-particles"
-          init={particlesInit}
-          options={particlesOptions}
-          className="absolute inset-0"
-        />
-      </div>
+      {/* Particle background — solo desktop */}
+      {!isMobile && (
+        <div className="absolute inset-0 z-0">
+          <Particles
+            id="hero-particles"
+            init={particlesInit}
+            options={particlesOptions}
+            className="absolute inset-0"
+          />
+        </div>
+      )}
 
       {/* Grid bg */}
       <div className="absolute inset-0 cyber-grid-bg z-0 opacity-60" />
 
-      {/* Glow blobs */}
+      {/* Glow blobs — blur ridotto su mobile */}
       <div
-        className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-[140px] opacity-20 pointer-events-none"
-        style={{ background: '#7c3aed' }}
+        className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-20 pointer-events-none"
+        style={{ background: '#7c3aed', filter: isMobile ? 'blur(60px)' : 'blur(140px)' }}
       />
       <div
-        className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-[120px] opacity-15 pointer-events-none"
-        style={{ background: '#06b6d4' }}
+        className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full opacity-15 pointer-events-none"
+        style={{ background: '#06b6d4', filter: isMobile ? 'blur(50px)' : 'blur(120px)' }}
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center pt-20">
@@ -116,10 +119,12 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* 3D Column */}
-        <div className="hidden md:block h-[500px]">
-          <FloatingGeometry />
-        </div>
+        {/* 3D Column — non montato su mobile */}
+        {!isMobile && (
+          <div className="h-[500px]">
+            <FloatingGeometry />
+          </div>
+        )}
       </div>
 
       {/* Scroll hint */}

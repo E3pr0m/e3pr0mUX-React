@@ -1,8 +1,7 @@
 import { useCursor } from '@/hooks/useCursor'
 
-export default function CustomCursor() {
+function CursorElements() {
   const { cursorRef, followerRef } = useCursor()
-
   return (
     <>
       <div
@@ -17,4 +16,10 @@ export default function CustomCursor() {
       />
     </>
   )
+}
+
+export default function CustomCursor() {
+  const isTouch = window.matchMedia('(pointer: coarse)').matches
+  if (isTouch) return null
+  return <CursorElements />
 }
